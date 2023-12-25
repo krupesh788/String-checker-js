@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>String Checker</h1><br><br>
+
+        <input type="text" id="str1"><br><br>
+        
+        <input type="text" id="str2"><br><br>
+
+        <input type="text" id="str3"><br><br>
+
+        <button onclick="checker()">Check</button>
+        <br>
+        <br>
+
+        <p id="p1"></p>
+        
+    </div>
+
+
+    <script>
+        function checker()
+        {
+
+        let str1 = document.getElementById("str1").value;
+        let str2 = document.getElementById("str2").value;
+        let str3 = document.getElementById("str3").value;
+
+        if(str1.startsWith(str2) && str1.endsWith(str3)){
+
+            document.getElementById("p1").innerHTML = `The String starts with "${str2}"  <br> &nbsp &nbsp and ends with "${str3}"!`;
+        }
+        else{
+
+            document.getElementById("p1").innerHTML = `The String is invalid!`;
+        }
+
+    }
+
+
+    </script>
+    
+</body>
+</html>
